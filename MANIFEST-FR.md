@@ -1,5 +1,7 @@
 # 🏛️ UNIVERSAL AI CLIPBOARD (UAC)
+
 ## Le Presse-papiers Universel pour l'Intelligence Artificielle
+
 ### Un Mécanisme de Réutilisation de Contenu pour les Agents IA
 
 ---
@@ -51,4 +53,4 @@ github.com/DScoNOIZ · 3 juin 2026
 
 ---
 
-*Version complète en anglais : [MANIFEST.md](MANIFEST.md)*
+_Version complète en anglais : [MANIFEST.md](MANIFEST.md)_

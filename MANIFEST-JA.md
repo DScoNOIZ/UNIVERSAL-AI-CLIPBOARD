@@ -1,5 +1,7 @@
 # 🏛️ UNIVERSAL AI CLIPBOARD (UAC)
+
 ## 人工知能のためのユニバーサルクリップボード
+
 ### AIエージェント向けコンテンツ再利用メカニズム
 
 ---
@@ -51,4 +53,4 @@ github.com/DScoNOIZ · 2026年6月3日
 
 ---
 
-*完全版（英語）：[MANIFEST.md](MANIFEST.md)*
+_完全版（英語）：[MANIFEST.md](MANIFEST.md)_

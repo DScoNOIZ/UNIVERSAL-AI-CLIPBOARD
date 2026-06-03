@@ -1,5 +1,7 @@
 # 🏛️ UNIVERSAL AI CLIPBOARD (UAC)
+
 ## Die Universelle Zwischenablage für Künstliche Intelligenz
+
 ### Ein Mechanismus zur Wiederverwendung von Inhalten für KI-Agenten
 
 ---
@@ -51,4 +53,4 @@ github.com/DScoNOIZ · 3. Juni 2026
 
 ---
 
-*Vollständige Version auf Englisch: [MANIFEST.md](MANIFEST.md)*
+_Vollständige Version auf Englisch: [MANIFEST.md](MANIFEST.md)_

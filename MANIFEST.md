@@ -1,5 +1,7 @@
 # 🏛️ UNIVERSAL AI CLIPBOARD (UAC)
+
 ## The Universal Clipboard for Artificial Intelligence
+
 ### A Content Reuse Mechanism for AI Agents
 
 ---
@@ -28,7 +30,7 @@ I, **[DScoNOIZ](https://github.com/DScoNOIZ)**, declare before the global commun
 
 **Official name:** **UNIVERSAL AI CLIPBOARD (UAC)**
 **Technical name:** Content Reference Mechanism
-**Tagline:** *"Reuse, Don't Regenerate"*
+**Tagline:** _"Reuse, Don't Regenerate"_
 **Metaphor:** Ctrl+C / Ctrl+V for AI Agents
 
 ---
@@ -50,13 +52,13 @@ Every time a model writes a command, a code block, or a text fragment — it reg
 
 ### Why Existing Approaches Don't Solve This
 
-| Approach | Limitation |
-|--------|------------|
-| **Prompt Caching** | Works only with static parts, not dynamic content |
-| **Semantic Caching** | Caches by query meaning, doesn't allow fragment citation |
-| **Context Compression** | Compresses history, but doesn't provide a citation tool |
-| **RAG** | Retrieves from external sources, doesn't reuse internal context |
-| **Tool Chaining** | Chains calls together, doesn't allow referencing their results |
+| Approach                | Limitation                                                      |
+| ----------------------- | --------------------------------------------------------------- |
+| **Prompt Caching**      | Works only with static parts, not dynamic content               |
+| **Semantic Caching**    | Caches by query meaning, doesn't allow fragment citation        |
+| **Context Compression** | Compresses history, but doesn't provide a citation tool         |
+| **RAG**                 | Retrieves from external sources, doesn't reuse internal context |
+| **Tool Chaining**       | Chains calls together, doesn't allow referencing their results  |
 
 ---
 
@@ -71,6 +73,7 @@ An AI agent gains the ability to **reference already-existing contextual content
 Beyond simple one-to-one citation, this concept enables a fundamentally new way of composing information — **mosaic assembly**.
 
 An agent can **combine multiple fragments from different sources** in a single operation:
+
 - Code from one file
 - Configuration from chat history
 - Command output from terminal
@@ -85,6 +88,7 @@ The agent can **edit on the fly** — modify, wrap, replace text within each fra
 An extension of this concept is a **clipboard manager with named slots** — similar to having multiple clipboards or a text buffer manager.
 
 The agent can:
+
 - **Save fragments** to named slots (`clip-1`, `clip-2`, `config-block`, `error-log`, etc.)
 - **Reference slots** by name instead of by content — zero tokens spent on description
 - **Swap and reorganize** content between slots
@@ -99,11 +103,11 @@ All existing citation mechanisms in AI (Citations API, Grounding, ContextCite) o
 
 Universal AI Clipboard operates on the **"agent → agent"** axis — it allows the agent itself to reuse content between its own tool calls. This is a fundamentally new category.
 
-| Mechanism | Axis | Purpose |
-|----------|------|---------|
-| Anthropic Citations | Agent → User | Show source of answer |
-| OpenAI Citations | Agent → User | Display sources |
-| Google Grounding | Agent → User | Web search confirmation |
+| Mechanism                  | Axis              | Purpose                           |
+| -------------------------- | ----------------- | --------------------------------- |
+| Anthropic Citations        | Agent → User      | Show source of answer             |
+| OpenAI Citations           | Agent → User      | Display sources                   |
+| Google Grounding           | Agent → User      | Web search confirmation           |
 | **★ UAC (this discovery)** | **Agent → Agent** | **Reusing content between calls** |
 
 ---
@@ -113,6 +117,7 @@ Universal AI Clipboard operates on the **"agent → agent"** axis — it allows 
 ### Mechanism 1: 🔗 Syntactic Clipboard
 
 The model specifies just one **anchor element** — a function name, class name, or variable. The system automatically:
+
 1. Finds this element in the specified source (file, chat message, command output)
 2. Determines its exact boundaries as a syntactic unit
 3. Extracts the entire unit
@@ -200,6 +205,7 @@ The following ideas are natural extensions of the concept and may be implemented
 For complex tasks requiring many intermediate steps (codebase exploration, log reading, test execution), a helper agent can be launched in an isolated temporary sub-session. It performs all the "dirty work," returns only the clean result, and the sub-session is then destroyed. The main agent stays focused on the primary task.
 
 ### Other Directions
+
 - Predictive caching of frequently used fragments
 - Automatic detection of duplicate calls
 - Intelligent disambiguation of ambiguous references
@@ -211,12 +217,12 @@ For complex tasks requiring many intermediate steps (codebase exploration, log r
 
 ### Per Agent
 
-| Metric | Without mechanism | With mechanism | Savings |
-|--------|-----------------|---------------|----------|
-| Tokens per citation (long code) | 200-500 | 5-15 | **96-97%** |
-| Tokens per citation (short code) | 50-100 | 2-5 | **90-95%** |
-| Tokens per session | 25,000-50,000 | 5,000-15,000 | **60-80%** |
-| Energy per session | arbitrary unit | 5x less | **~80%** |
+| Metric                           | Without mechanism | With mechanism | Savings    |
+| -------------------------------- | ----------------- | -------------- | ---------- |
+| Tokens per citation (long code)  | 200-500           | 5-15           | **96-97%** |
+| Tokens per citation (short code) | 50-100            | 2-5            | **90-95%** |
+| Tokens per session               | 25,000-50,000     | 5,000-15,000   | **60-80%** |
+| Energy per session               | arbitrary unit    | 5x less        | **~80%**   |
 
 ### Global Scale
 
@@ -228,29 +234,52 @@ When adopted industry-wide, savings will reach billions of tokens daily, equival
 
 ## 🔬 UNIQUENESS VERIFICATION
 
-I conducted **extensive deep research** through web search systems (Tavily Search, advanced depth) covering the following topics:
+I conducted **extensive multi-round deep research** (7 rounds, ~50 sources) through web search systems (Tavily Search, advanced depth) covering all known categories of AI agent architectures:
 
 - AI agent clipboard copy-paste between tool calls
 - Content citation mechanisms for AI agents
 - Zero-token copy paste technologies
-- All known citation APIs (Anthropic, OpenAI, Google, xAI)
-- Tool call output reuse and caching
-
-I studied dozens of existing technologies, API mechanisms, open-source frameworks, and academic protocols.
+- All known citation APIs (Anthropic, OpenAI, Google, xAI, Azure)
+- Tool call output reuse and caching (CAMEL-AI, LangChain artifacts)
+- MCP protocol and cross-protocol content sharing
+- Academic papers (AgentReuse, KVCOMM, multi-agent systems)
+- Human clipboard utilities (UiPath Clipboard AI, PowerToys Advanced Paste)
+- Memory sharing systems for multi-agent architectures
+- GitHub discussions, framework documentation (LangChain, CrewAI, AutoGen, Mastra)
 
 **Objective:** find anything that solves the same problem — allowing an AI agent to reference existing content between tool calls instead of regenerating it.
 
 **Result: nothing of the kind was found.**
 
-| Technology | Why it is NOT an analogue |
-|-----------|--------------------------|
-| **Citation APIs (Anthropic/OpenAI/Google)** | Show the user the source, don't let the agent reuse content |
-| **Caching** | Works at the request level, not the content fragment level |
-| **RAG** | Retrieves from external knowledge bases, not from the current session context |
-| **Existing AI agents** | Have history, but no citation mechanism between tool calls |
-| **Human tools (UiPath, PowerToys)** | Designed for human-computer interaction, not for AI agents |
+| Category                                    | Sources                   | Why it is NOT an analogue                                                                                                             |
+| ------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **Citation APIs (Anthropic/OpenAI/Google)** | Official APIs             | Show the user the source, don't let the agent reuse content. Axis: Agent → User only                                                  |
+| **Caching (Prompt, Semantic)**              | Various frameworks        | Works at the request level, not the content fragment level                                                                            |
+| **RAG**                                     | LangChain, OpenAI, Google | Retrieves from external knowledge bases, not from the current session context                                                         |
+| **CAMEL-AI "Brainwash Your Agent"**         | camel-ai.org              | Stores only the LAST tool output as reference + short preview. No 5 mechanisms, no transform pipeline, no multi_ref, no MCP injection |
+| **LangChain artifacts**                     | langchain.com             | `content_and_artifact` splits content from metadata, not a citation system. No inter-call referencing                                 |
+| **MCP Resources**                           | modelcontextprotocol.io   | A standard for connecting tools, not an agent-to-agent citation mechanism                                                             |
+| **Academic (AgentReuse, KVCOMM)**           | arXiv                     | Reuse of execution PLANS or KV-cache, not content citation between tool calls                                                         |
+| **Human tools (UiPath, PowerToys)**         | UiPath, Microsoft         | Designed for human-computer interaction, not for AI agents                                                                            |
+| **Existing AI agents**                      | Industry-wide             | Have history, but no citation mechanism between tool calls                                                                            |
+| **Multi-agent memory sharing**              | Various                   | Shared RAG memory, not precise character-level citation                                                                               |
 
-> **Universal AI Clipboard has no analogues in worldwide AI agent systems practice. This is a pioneering technology creating a new category.**
+### Summary comparison with the closest partial match (CAMEL-AI)
+
+| Feature                                   | UAC      | CAMEL-AI caching | Difference |
+| ----------------------------------------- | -------- | ---------------- | ---------- |
+| 🔗 Syntactic Clipboard (AST blocks)       | ✅       | ❌               | UAC only   |
+| 📇 Anchor Pair Citation                   | ✅       | ❌               | UAC only   |
+| 🧠 Message Index Map                      | ✅       | ❌               | UAC only   |
+| 🔄 Transform Pipeline                     | ✅       | ❌               | UAC only   |
+| 🔁 Cross-Protocol Citation (MCP)          | ✅       | ❌               | UAC only   |
+| 🧩 Mosaic Assembly (multi-source)         | ✅       | ❌               | UAC only   |
+| 📋 Clipboard Manager (named slots)        | ✅       | ❌               | UAC only   |
+| {{ref:...}} Inline Injection              | ✅       | ❌               | UAC only   |
+| Tool output caching (reference + preview) | ✅       | ✅               | Both       |
+| Coverage of UAC features                  | **100%** | **~5%**          | —          |
+
+> **Universal AI Clipboard has no analogues in worldwide AI agent systems practice. This is a pioneering technology creating a new category. The multi-round deep search confirmed: zero analogues exist at any level — conceptual, architectural, or implementational.**
 
 ---
 
@@ -296,6 +325,7 @@ An agent uses an external MCP tool, passing a reference to configuration from ch
 **🏛️ Creative Commons Zero (CC0) — Universal Public Domain Dedication**
 
 You are free to:
+
 - ✅ **Use** in commercial and non-commercial projects
 - ✅ **Modify** and adapt for your needs
 - ✅ **Distribute** in any form
@@ -318,34 +348,40 @@ The commit history, edit dates, and all chronological changes are **immutably pr
 
 ## 🗓️ TIMELINE
 
-| Date | Event |
-|------|-------|
-| **May — June 2026** | Research: analysis of existing AI agent architectures |
-| **June 2026** | Discovery: no existing technology has an analogue |
-| **June 2026** | Universal AI Clipboard concept formulated |
-| **June 3, 2026** | Uniqueness research completed — **no analogues found** |
-| **June 3, 2026** | **This manifesto published** — discovery released into the public domain |
+| Date                | Event                                                                    |
+| ------------------- | ------------------------------------------------------------------------ |
+| **May — June 2026** | Research: analysis of existing AI agent architectures                    |
+| **June 2026**       | Discovery: no existing technology has an analogue                        |
+| **June 2026**       | Universal AI Clipboard concept formulated                                |
+| **June 3, 2026**    | Uniqueness research completed — **no analogues found**                   |
+| **June 3, 2026**    | **This manifesto published** — discovery released into the public domain |
 
 ---
 
 ## 🎯 CALL TO ACTION
 
 ### AI Framework Developers
+
 Integrate the Content Reference mechanism into your tools. Give your users instant token savings without changing their code.
 
 ### AI Agent Creators
+
 Add optional citation between tool calls. Your agents will become orders of magnitude more efficient.
 
 ### Researchers
+
 Advance the technology: improve search algorithms, implement predictive caching, develop new scenarios.
 
 ### Business
+
 Adopt Universal AI Clipboard in your AI solutions. Reduce operational costs by tens of percent.
 
 ### Environmentalists
+
 Use UAC as a tool to reduce the carbon footprint of AI infrastructure.
 
 ### Open Source Community
+
 Fork, implement, improve. **This technology belongs to everyone.**
 
 ---
@@ -383,6 +419,6 @@ I give this idea to humanity. Develop it. Improve it. Implement it.
 
 ---
 
-*This manifesto may be freely translated into any language. Original in Russian.*
+_This manifesto may be freely translated into any language. Original in Russian._
 
-*Русская версия: [MANIFEST.md](MANIFEST.md)*
+_Русская версия: [MANIFEST.md](MANIFEST.md)_

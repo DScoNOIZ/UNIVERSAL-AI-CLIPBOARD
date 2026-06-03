@@ -1,5 +1,7 @@
 # 🏛️ UNIVERSAL AI CLIPBOARD (UAC)
+
 ## El Portapapeles Universal para la Inteligencia Artificial
+
 ### Un Mecanismo de Reutilización de Contenido para Agentes de IA
 
 ---
@@ -28,7 +30,7 @@ Yo, **[DScoNOIZ](https://github.com/DScoNOIZ)**, declaro ante la comunidad globa
 
 **Nombre oficial:** **UNIVERSAL AI CLIPBOARD (UAC)**
 **Nombre técnico:** Mecanismo de Referencia de Contenido
-**Lema:** *«Reuse, Don't Regenerate»* — *«Reutiliza, no regenere»*
+**Lema:** _«Reuse, Don't Regenerate»_ — _«Reutiliza, no regenere»_
 **Metáfora:** Ctrl+C / Ctrl+V para Agentes de IA
 
 ---
@@ -59,6 +61,7 @@ Un agente de IA obtiene la capacidad de **referenciar contenido contextual ya ex
 Más allá de la citación simple, este concepto permite una forma fundamentalmente nueva de componer información: **ensamblaje de mosaico**.
 
 Un agente puede **combinar múltiples fragmentos de diferentes fuentes** en una sola operación:
+
 - Código de un archivo
 - Configuración del historial de chat
 - Salida de comandos del terminal
@@ -69,6 +72,7 @@ El agente puede **editar sobre la marcha** — modificar, envolver, reemplazar t
 ### Gestor de Portapapeles: Slots Nombrados para Almacenamiento
 
 Una extensión natural es un **gestor de portapapeles con slots nombrados**. El agente puede:
+
 - **Guardar fragmentos** en slots con nombre (`clip-1`, `config-block`, etc.)
 - **Referenciar slots por nombre** — cero tokens gastados en descripción
 - **Intercambiar y reorganizar** contenido entre slots
@@ -77,30 +81,35 @@ Una extensión natural es un **gestor de portapapeles con slots nombrados**. El 
 
 ### Diferencia Axial con Mecanismos Existentes
 
-| Mecanismo | Eje | Propósito |
-|----------|------|---------|
-| Anthropic Citations | Agente → Usuario | Mostrar fuente |
-| OpenAI Citations | Agente → Usuario | Mostrar fuentes |
-| Google Grounding | Agente → Usuario | Confirmación web |
-| **★ UAC** | **Agente → Agente** | **Reutilización entre llamadas** |
+| Mecanismo           | Eje                 | Propósito                        |
+| ------------------- | ------------------- | -------------------------------- |
+| Anthropic Citations | Agente → Usuario    | Mostrar fuente                   |
+| OpenAI Citations    | Agente → Usuario    | Mostrar fuentes                  |
+| Google Grounding    | Agente → Usuario    | Confirmación web                 |
+| **★ UAC**           | **Agente → Agente** | **Reutilización entre llamadas** |
 
 ---
 
 ## 🧩 CINCO MECANISMOS CLAVE
 
 ### Mecanismo 1: 🔗 Portapapeles Sintáctico
+
 El modelo especifica un elemento ancla — nombre de función, clase o variable. El sistema lo encuentra y extrae toda la unidad sintáctica.
 
 ### Mecanismo 2: 📇 Citación por Par de Anclas
+
 El modelo especifica solo el INICIO y FIN de un fragmento. El sistema encuentra todo lo intermedio mediante búsqueda multietapa.
 
 ### Mecanismo 3: 🧠 Mapa de Índice de Mensajes
+
 Un índice separado mapea posiciones exactas de caracteres en el historial de chat. El modelo escribe una referencia corta como «167:14..18» — el sistema extrae con precisión del 100%.
 
 ### Mecanismo 4: 🔄 Tubería de Transformación
+
 Un fragmento copiado puede modificarse sobre la marcha — reemplazar, anteponer, envolver, añadir o fusionar múltiples fragmentos. Todo en una sola llamada.
 
 ### Mecanismo 5: 🔁 Citación entre Protocolos
+
 Los marcadores de referencia pueden incrustarse dentro de los parámetros de texto de cualquier herramienta. El sistema sustituye el contenido real antes de llamar a servidores externos.
 
 ---
@@ -108,17 +117,18 @@ Los marcadores de referencia pueden incrustarse dentro de los parámetros de tex
 ## 🔭 DIRECCIONES FUTURAS
 
 ### 🏖️ Subsesiones Aisladas para Investigación
+
 Para tareas complejas, un agente auxiliar se ejecuta en una sesión temporal aislada, realiza el trabajo pesado, devuelve solo el resultado limpio y luego se destruye.
 
 ---
 
 ## 💰 IMPACTO ECONÓMICO
 
-| Métrica | Sin mecanismo | Con mecanismo | Ahorro |
-|--------|-----------------|---------------|----------|
-| Tokens por cita (código largo) | 200-500 | 5-15 | **96-97%** |
-| Tokens por cita (código corto) | 50-100 | 2-5 | **90-95%** |
-| Tokens por sesión | 25,000-50,000 | 5,000-15,000 | **60-80%** |
+| Métrica                        | Sin mecanismo | Con mecanismo | Ahorro     |
+| ------------------------------ | ------------- | ------------- | ---------- |
+| Tokens por cita (código largo) | 200-500       | 5-15          | **96-97%** |
+| Tokens por cita (código corto) | 50-100        | 2-5           | **90-95%** |
+| Tokens por sesión              | 25,000-50,000 | 5,000-15,000  | **60-80%** |
 
 ---
 
@@ -151,4 +161,4 @@ github.com/DScoNOIZ · 3 de junio de 2026
 
 ---
 
-*Versión completa en inglés: [MANIFEST.md](MANIFEST.md)*
+_Versión completa en inglés: [MANIFEST.md](MANIFEST.md)_

@@ -69,17 +69,20 @@ Up to **96% token savings**, **60-80% cost reduction**, billions of tokens saved
 
 ### 📂 Files
 
-| File                               | Language                 |
-| ---------------------------------- | ------------------------ |
-| [`MANIFEST.md`](MANIFEST.md)       | 🇬🇧 English (full)        |
-| [`MANIFEST-RU.md`](MANIFEST-RU.md) | 🇷🇺 Russian               |
-| [`MANIFEST-ZH.md`](MANIFEST-ZH.md) | 🇨🇳 Chinese               |
-| [`MANIFEST-ES.md`](MANIFEST-ES.md) | 🇪🇸 Spanish               |
-| [`MANIFEST-DE.md`](MANIFEST-DE.md) | 🇩🇪 German                |
-| [`MANIFEST-FR.md`](MANIFEST-FR.md) | 🇫🇷 French                |
-| [`MANIFEST-JA.md`](MANIFEST-JA.md) | 🇯🇵 Japanese              |
-| [`MANIFEST-HI.md`](MANIFEST-HI.md) | 🇮🇳 Hindi                 |
-| [`index.html`](index.html)         | 🌐 Website (8 languages) |
+| File                                         | Description                              |
+| -------------------------------------------- | ---------------------------------------- |
+| [`MANIFEST.md`](MANIFEST.md)                 | 🇬🇧 English Manifesto (full)              |
+| [`MANIFEST-RU.md`](MANIFEST-RU.md)           | 🇷🇺 Russian — Полный манифест             |
+| [`MANIFEST-ZH.md`](MANIFEST-ZH.md)           | 🇨🇳 Chinese — 完整宣言                    |
+| [`MANIFEST-ES.md`](MANIFEST-ES.md)           | 🇪🇸 Spanish — Manifiesto completo         |
+| [`MANIFEST-DE.md`](MANIFEST-DE.md)           | 🇩🇪 German — Vollständiges Manifest       |
+| [`MANIFEST-FR.md`](MANIFEST-FR.md)           | 🇫🇷 French — Manifeste complet            |
+| [`MANIFEST-JA.md`](MANIFEST-JA.md)           | 🇯🇵 Japanese — 完全なマニフェスト         |
+| [`MANIFEST-HI.md`](MANIFEST-HI.md)           | 🇮🇳 Hindi — पूर्ण घोषणापत्र              |
+| [`RESEARCH.md`](RESEARCH.md)                 | 🔬 Full research history (10 rounds, ~100 sources) |
+| [`COMPARISON.md`](COMPARISON.md)             | 📊 Detailed comparison with existing systems |
+| [`SPECIFICATION.md`](SPECIFICATION.md)       | 📐 Technical specification & objections refutation |
+| [`index.html`](index.html)                   | 🌐 Website (8 languages)                 |
 
 ### 🌐 Website
 
@@ -146,6 +149,23 @@ UAC расширяет идею до **универсальной системы
 ### 🌐 Сайт
 
 **https://dsconoiz.github.io/UNIVERSAL-AI-CLIPBOARD/** — автоматически определяет язык браузера.
+
+### 📂 Файлы
+
+| Файл | Описание |
+| ---- | -------- |
+| [`MANIFEST.md`](MANIFEST.md) | 🇬🇧 Манифест (английский, полный) |
+| [`MANIFEST-RU.md`](MANIFEST-RU.md) | 🇷🇺 Манифест (русский, полный) |
+| [`MANIFEST-ZH.md`](MANIFEST-ZH.md) | 🇨🇳 Манифест (китайский) |
+| [`MANIFEST-ES.md`](MANIFEST-ES.md) | 🇪🇸 Манифест (испанский) |
+| [`MANIFEST-DE.md`](MANIFEST-DE.md) | 🇩🇪 Манифест (немецкий) |
+| [`MANIFEST-FR.md`](MANIFEST-FR.md) | 🇫🇷 Манифест (французский) |
+| [`MANIFEST-JA.md`](MANIFEST-JA.md) | 🇯🇵 Манифест (японский) |
+| [`MANIFEST-HI.md`](MANIFEST-HI.md) | 🇮🇳 Манифест (хинди) |
+| [`RESEARCH.md`](RESEARCH.md) | 🔬 Полная история исследования (10 раундов, ~100 источников) |
+| [`COMPARISON.md`](COMPARISON.md) | 📊 Детальное сравнение с существующими системами |
+| [`SPECIFICATION.md`](SPECIFICATION.md) | 📐 Техническая спецификация и опровержение возражений |
+| [`index.html`](index.html) | 🌐 Веб-сайт (8 языков) |
 
 ### ⚖️ Правовой статус
 

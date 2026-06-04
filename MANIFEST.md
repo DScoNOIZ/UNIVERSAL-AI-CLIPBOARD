@@ -450,4 +450,4 @@ I give this idea to humanity. Develop it. Improve it. Implement it.
 
 _This manifesto may be freely translated into any language. Original in Russian._
 
-_Русская версия: [MANIFEST.md](MANIFEST.md)_
+_Русская версия: [MANIFEST-RU.md](MANIFEST-RU.md)_

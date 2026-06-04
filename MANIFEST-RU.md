@@ -266,7 +266,7 @@ Universal AI Clipboard работает по оси **«агент → аген�
 - Zero-token copy paste технологии
 - Все известные API цитирования (Anthropic, OpenAI, Google, xAI, Azure)
 - Переиспользование и кеширование результатов вызовов инструментов (CAMEL-AI, LangChain artifacts)
-- Протокол MCP и сквозное共享 контента между протоколами
+- Протокол MCP и сквозной обмен контента между протоколами
 - Академические работы (AgentReuse, KVCOMM, мульти-агентные системы)
 - Инструменты буфера обмена для людей (UiPath Clipboard AI, PowerToys Advanced Paste)
 - Системы разделяемой памяти для мульти-агентных архитектур
@@ -451,4 +451,4 @@ Universal AI Clipboard работает по оси **«агент → аген�
 
 _Данный манифест может быть свободно переведён на любой язык мира. Оригинал на русском языке._
 
-_English version: [MANIFEST-EN.md](MANIFEST-EN.md)_
+_English version: [MANIFEST.md](MANIFEST.md)_

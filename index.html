@@ -184,7 +184,7 @@
     <div class="logo">UAC</div>
     <div class="logo-sub"><span>UNIVERSAL</span> AI CLIPBOARD</div>
     <div class="tagline" data-key="tagline">"Reuse, Don't Regenerate"</div>
-    <div class="discoverer-line" style="font-size:0.82rem;color:var(--text-dim);margin-top:10px;letter-spacing:0.02em;"><span data-key="discovererLabel">Discoverer</span>: <a href="https://github.com/DScoNOIZ" style="color:var(--accent1);text-decoration:none;">DScoNOIZ</a> &nbsp;·&nbsp; <span data-key="coDiscovererLabel">Co-Discoverer</span>: <a href="https://github.com/TJ-Codes" style="color:var(--accent1);text-decoration:none;">TJ Guadagno</a></div>
+    <div class="discoverer-line" style="font-size:0.82rem;color:var(--text-dim);margin-top:10px;letter-spacing:0.02em;"><span data-key="discovererLabel">Independent Co-Discoverers</span>: <a href="https://github.com/DScoNOIZ" style="color:var(--accent1);text-decoration:none;">DScoNOIZ</a> &nbsp;·&nbsp; <a href="https://github.com/TJ-Codes" style="color:var(--accent1);text-decoration:none;">TJ Guadagno</a></div>
   </div>
 </header>
 
@@ -275,13 +275,16 @@
     <h2 class="section-title"><span class="acc1">⏺</span> <span data-key="uniqueTitle">Uniqueness Verification</span></h2>
     <div style="overflow-x:auto;">
       <table class="comp-table">
-        <thead><tr><th data-key="comp1">Mechanism</th><th data-key="comp2">Axis</th><th data-key="comp3">Purpose</th></tr></thead>
+        <thead><tr><th data-key="comp1">Mechanism</th><th data-key="comp2">Axis</th><th data-key="comp3">Purpose</th><th data-key="compMatch">UAC coverage</th></tr></thead>
         <tbody>
-          <tr><td>Anthropic Citations API</td><td><span class="badge-axis axis-user">Agent → User</span></td><td data-key="compRow1">Show source of answer</td></tr>
-          <tr><td>OpenAI Citation Formatting</td><td><span class="badge-axis axis-user">Agent → User</span></td><td data-key="compRow2">Tags for source display</td></tr>
-          <tr><td>Google Gemini Grounding</td><td><span class="badge-axis axis-user">Agent → User</span></td><td data-key="compRow3">Web search confirmation</td></tr>
-          <tr><td>ContextCite (MIT CSAIL)</td><td><span class="badge-axis axis-user">Agent → User</span></td><td data-key="compRow4">Source identification</td></tr>
-          <tr class="hl"><td class="name">★ Universal AI Clipboard (UAC)</td><td><span class="badge-axis axis-agent">Agent → Agent</span></td><td data-key="compRow5" style="font-weight:600;">Content reuse between calls</td></tr>
+          <!-- ★ CLOSEST PARTIAL ANALOGUE — FIRST -->
+          <tr class="hl"><td class="name"><strong>Clipboard Primitives (TJ Guadagno)</strong></td><td><span class="badge-axis axis-agent">Agent → Agent</span></td><td data-key="compRowCp" style="color:var(--accent2);font-weight:600;">copy+template_invoke, named slots, {{slot}} placeholders, harness-level resolution, byte-identical transfer</td><td data-key="compPctCp" style="color:var(--accent2);font-weight:600;">⚠️ ~40%</td></tr>
+          <tr><td>Anthropic Citations API</td><td><span class="badge-axis axis-user">Agent → User</span></td><td data-key="compRow1">Show source of answer</td><td data-key="compPct1">❌</td></tr>
+          <tr><td>OpenAI Citation Formatting</td><td><span class="badge-axis axis-user">Agent → User</span></td><td data-key="compRow2">Tags for source display</td><td data-key="compPct2">❌</td></tr>
+          <tr><td>Google Gemini Grounding</td><td><span class="badge-axis axis-user">Agent → User</span></td><td data-key="compRow3">Web search confirmation</td><td data-key="compPct3">❌</td></tr>
+          <tr><td>ContextCite (MIT CSAIL)</td><td><span class="badge-axis axis-user">Agent → User</span></td><td data-key="compRow4">Source identification</td><td data-key="compPct4">❌</td></tr>
+          <!-- ★ UAC — FULL CONCEPT -->
+          <tr class="hl"><td class="name"><strong>★ Universal AI Clipboard (UAC)</strong></td><td><span class="badge-axis axis-agent">Agent → Agent</span></td><td data-key="compRow5" style="font-weight:600;color:var(--accent3);">5 mechanisms, all sources, transforms, MCP injection, mosaic assembly</td><td data-key="compPct5" style="font-weight:600;color:var(--accent3);">✅ 100%</td></tr>
         </tbody>
       </table>
     </div>
@@ -372,7 +375,7 @@
 <footer>
   <div class="container">
     <p><strong>UNIVERSAL AI CLIPBOARD (UAC)</strong> — <span data-key="footerTag">a discovery released into the public domain</span></p>
-    <p><span data-key="discovererLabel">Discoverer</span>: <a href="https://github.com/DScoNOIZ" style="color:var(--accent1);text-decoration:none;">DScoNOIZ</a> · <span data-key="coDiscovererLabel">Co-Discoverer</span>: <a href="https://github.com/TJ-Codes" style="color:var(--accent1);text-decoration:none;">TJ Guadagno</a></p>
+    <p><span data-key="discovererLabel">Independent Co-Discoverers</span>: <a href="https://github.com/DScoNOIZ" style="color:var(--accent1);text-decoration:none;">DScoNOIZ</a> · <a href="https://github.com/TJ-Codes" style="color:var(--accent1);text-decoration:none;">TJ Guadagno</a></p>
     <p data-key="footerAuth">github.com/DScoNOIZ · June 3, 2026</p>
     <p style="margin-top:6px;"><a href="https://github.com/DScoNOIZ/UNIVERSAL-AI-CLIPBOARD" target="_blank">GitHub</a> &nbsp;·&nbsp; <span data-key="footerLicense">CC0 1.0 Universal — Public Domain</span></p>
   </div>
@@ -401,8 +404,7 @@ const MANIFEST_FILES = {
 const TR = {
   en: {
     tagline: '"Reuse, Don\'t Regenerate"',
-    discovererLabel: 'Discoverer',
-    coDiscovererLabel: 'Co-Discoverer',
+    discovererLabel: 'Independent Co-Discoverers',
     ctaTitle: 'A New Category in AI Agent Architecture',
     ctaDesc: 'Universal AI Clipboard (UAC) — a mechanism that allows AI agents to reuse content instead of regenerating it. Up to 96% token savings. Released into the public domain.',
     aboutTitle: 'Discovery Manifesto',
@@ -423,7 +425,13 @@ const TR = {
     p6Tag: 'Future', p6Title: 'Isolated Sub-Sessions', p6Desc: 'For complex tasks, a helper agent runs in an isolated temporary session, performs dirty work, returns only the clean result, then is destroyed.',
     uniqueTitle: 'Uniqueness Verification',
     comp1: 'Mechanism', comp2: 'Axis', comp3: 'Purpose',
-    compRow1: 'Show source of answer', compRow2: 'Tags for source display', compRow3: 'Web search confirmation', compRow4: 'Source identification', compRow5: 'Content reuse between calls',
+    compMatch: 'UAC coverage',
+    compRowCp: 'copy+template_invoke, named slots, {{slot}} placeholders, harness-level resolution, byte-identical transfer',
+    compPctCp: '⚠️ ~40%',
+    compRow1: 'Show source of answer', compRow2: 'Tags for source display', compRow3: 'Web search confirmation', compRow4: 'Source identification',
+    compPct1: '❌', compPct2: '❌', compPct3: '❌', compPct4: '❌',
+    compRow5: '5 mechanisms, all sources, transforms, MCP injection, mosaic assembly',
+    compPct5: '✅ 100%',
     uniqueConclusion: '<strong>Conclusion:</strong> Universal AI Clipboard (UAC) <strong style="color:var(--accent3);">has no complete analogues</strong> in worldwide AI agent systems practice.',
     researchTitle: 'Deep Research Verification (10 Rounds)',
     research1: 'I conducted <strong>10 rounds of deep search</strong> (Tavily advanced depth, ~100 sources) across all known AI categories: arXiv, LangChain, Anthropic, OpenAI, Google, MCP, CAMEL-AI, UiPath, Microsoft, AWS, GitHub discussions — <strong style="color:var(--accent3);">zero complete analogues found</strong>.',
@@ -446,8 +454,7 @@ const TR = {
   },
   ru: {
     tagline: '«Переиспользуй, а не генерируй заново»',
-    discovererLabel: 'Первооткрыватель',
-    coDiscovererLabel: 'Сооткрыватель',
+    discovererLabel: 'Независимые со-первооткрыватели',
     ctaTitle: 'Открытие новой категории в архитектуре AI-агентов',
     ctaDesc: 'Universal AI Clipboard (UAC) — механизм, позволяющий AI-агентам переиспользовать контент вместо повторной генерации. Экономия до 96% токенов. Общественное достояние.',
     aboutTitle: 'Манифест открытия',
@@ -468,7 +475,13 @@ const TR = {
     p6Tag: 'Перспектива', p6Title: 'Изолированные подсессии', p6Desc: 'Для сложных задач вспомогательный агент в изолированной сессии выполняет черновую работу, возвращает чистый результат и уничтожается.',
     uniqueTitle: 'Проверка уникальности',
     comp1: 'Механизм', comp2: 'Ось', comp3: 'Назначение',
-    compRow1: 'Показать источник ответа', compRow2: 'Отображение источников', compRow3: 'Подтверждение из поиска', compRow4: 'Определение источников', compRow5: 'Переиспользование между вызовами',
+    compMatch: 'Покрытие UAC',
+    compRowCp: 'copy+template_invoke, именованные слоты, {{slot}} плейсхолдеры, разрешение на уровне харнесса, побайтовая передача',
+    compPctCp: '⚠️ ~40%',
+    compRow1: 'Показать источник ответа', compRow2: 'Отображение источников', compRow3: 'Подтверждение из поиска', compRow4: 'Определение источников',
+    compPct1: '❌', compPct2: '❌', compPct3: '❌', compPct4: '❌',
+    compRow5: '5 механизмов, все источники, трансформации, MCP-инъекция, мозаичная сборка',
+    compPct5: '✅ 100%',
     uniqueConclusion: '<strong>Вывод:</strong> Universal AI Clipboard (UAC) <strong style="color:var(--accent3);">не имеет полных аналогов</strong> в мировой практике AI-агентных систем.',
     researchTitle: 'Глубокое исследование (10 раундов)',
     research1: 'Проведено <strong>10 раундов глубокого поиска</strong> (Tavily advanced depth, ~100 источников) по всем известным категориям AI: arXiv, LangChain, Anthropic, OpenAI, Google, MCP, CAMEL-AI, UiPath, Microsoft, AWS, GitHub discussions — <strong style="color:var(--accent3);">ноль полных аналогов</strong>.',
@@ -491,8 +504,7 @@ const TR = {
   },
   zh: {
     tagline: '「重用，而非重新生成」',
-    discovererLabel: '发现者',
-    coDiscovererLabel: '共同发现者',
+    discovererLabel: '独立共同发现者',
     ctaTitle: 'AI代理架构中的新类别',
     ctaDesc: 'Universal AI Clipboard (UAC) — 允许AI代理重用内容而非重新生成的机制。高达96%的令牌节省。已进入公共领域。',
     aboutTitle: '发现宣言',
@@ -513,7 +525,13 @@ const TR = {
     p6Tag: '未来', p6Title: '隔离子会话', p6Desc: '复杂任务：辅助代理在隔离临时会话中运行，返回干净结果后销毁。',
     uniqueTitle: '独特性验证',
     comp1: '机制', comp2: '轴', comp3: '目的',
-    compRow1: '显示答案来源', compRow2: '来源显示标签', compRow3: '网页搜索确认', compRow4: '来源识别', compRow5: '调用间内容重用',
+    compMatch: 'UAC 覆盖率',
+    compRowCp: 'copy+template_invoke, 命名插槽, {{slot}} 占位符, harness解析, 逐字节传输',
+    compPctCp: '⚠️ ~40%',
+    compRow1: '显示答案来源', compRow2: '来源显示标签', compRow3: '网页搜索确认', compRow4: '来源识别',
+    compPct1: '❌', compPct2: '❌', compPct3: '❌', compPct4: '❌',
+    compRow5: '5种机制, 所有来源, 转换, MCP注入, 马赛克组装',
+    compPct5: '✅ 100%',
     uniqueConclusion: '<strong>结论：</strong> Universal AI Clipboard (UAC) <strong style="color:var(--accent3);">在全球AI代理系统实践中没有完整类似物</strong>。',
     researchTitle: '深度研究验证（10轮）',
     research1: '我进行了<strong>10轮深度搜索</strong>（Tavily高级深度，~100来源）跨越所有已知AI类别：arXiv、LangChain、Anthropic、OpenAI、Google、MCP、CAMEL-AI、UiPath、Microsoft、AWS、GitHub讨论——<strong style="color:var(--accent3);">零完整类似物</strong>。',
@@ -536,8 +554,7 @@ const TR = {
   },
   es: {
     tagline: '"Reutiliza, no regenere"',
-    discovererLabel: 'Descubridor',
-    coDiscovererLabel: 'Co-descubridor',
+    discovererLabel: 'Co-descubridores independientes',
     ctaTitle: 'Una nueva categoría en la arquitectura de agentes de IA',
     ctaDesc: 'Universal AI Clipboard (UAC) — un mecanismo que permite a los agentes de IA reutilizar contenido en lugar de regenerarlo. Hasta 96% de ahorro de tokens. Dominio público.',
     aboutTitle: 'Manifiesto del descubrimiento',
@@ -565,7 +582,13 @@ const TR = {
     researchCallout: '<strong>Resultado:</strong> Universal AI Clipboard no es "solo otra herramienta". Es una <strong>nueva categoría de arquitectura</strong> para agentes de IA, con un nuevo eje de citación (Agente→Agente) y 5 mecanismos únicos sin análogo completo en el mundo. (Clipboard Primitives de TJ Guadagno es una implementación parcial ~40%).',
     uniqueTitle: 'Verificación de unicidad',
     comp1: 'Mecanismo', comp2: 'Eje', comp3: 'Propósito',
-    compRow1: 'Mostrar fuente', compRow2: 'Mostrar fuentes', compRow3: 'Confirmación web', compRow4: 'Identificación', compRow5: 'Reutilización entre llamadas',
+    compMatch: 'Cobertura UAC',
+    compRowCp: 'copy+template_invoke, slots nombrados, placeholders {{slot}}, resolución a nivel harness, transferencia byte-idéntica',
+    compPctCp: '⚠️ ~40%',
+    compRow1: 'Mostrar fuente', compRow2: 'Mostrar fuentes', compRow3: 'Confirmación web', compRow4: 'Identificación',
+    compPct1: '❌', compPct2: '❌', compPct3: '❌', compPct4: '❌',
+    compRow5: '5 mecanismos, todas las fuentes, transformaciones, inyección MCP, ensamblaje mosaico',
+    compPct5: '✅ 100%',
     uniqueConclusion: '<strong>Conclusión:</strong> UAC <strong style="color:var(--accent3);">no tiene análogos completos</strong> en sistemas de agentes de IA.',
     sourcesTitle: 'Recursos',
     src1Label: '📄 Documento', src1Title: 'Manifiesto completo (inglés)', src1Desc: 'Descripción completa: problema, solución, 5 mecanismos, impacto económico.',
@@ -581,8 +604,7 @@ const TR = {
   },
   de: {
     tagline: '„Wiederverwenden, nicht neu generieren"',
-    discovererLabel: 'Entdecker',
-    coDiscovererLabel: 'Mitentdecker',
+    discovererLabel: 'Unabhängige Mitentdecker',
     ctaTitle: 'Eine neue Kategorie in der KI-Agenten-Architektur',
     ctaDesc: 'UAC — ein Mechanismus, der KI-Agenten ermöglicht, Inhalte wiederzuverwenden statt neu zu generieren. Bis zu 96% Token-Ersparnis. Gemeinfreiheit.',
     aboutTitle: 'Entdeckungsmanifest',
@@ -610,7 +632,13 @@ const TR = {
     researchCallout: '<strong>Ergebnis:</strong> Universal AI Clipboard ist nicht "nur ein weiteres Tool". Es ist eine <strong>neue Architektur-Kategorie</strong> für KI-Agenten mit einer neuen Zitierachse (Agent→Agent) und 5 einzigartigen Mechanismen ohne vollständige Analogie weltweit. (Clipboard Primitives von TJ Guadagno ist eine ~40% Teilimplementierung.)',
     uniqueTitle: 'Einzigartigkeitsprüfung',
     comp1: 'Mechanismus', comp2: 'Achse', comp3: 'Zweck',
-    compRow1: 'Quelle anzeigen', compRow2: 'Quellen anzeigen', compRow3: 'Websuche Bestätigung', compRow4: 'Quellenidentifikation', compRow5: 'Wiederverwendung zwischen Aufrufen',
+    compMatch: 'UAC-Abdeckung',
+    compRowCp: 'copy+template_invoke, benannte Slots, {{slot}}-Platzhalter, Auflösung auf Harness-Ebene, byte-idente Übertragung',
+    compPctCp: '⚠️ ~40%',
+    compRow1: 'Quelle anzeigen', compRow2: 'Quellen anzeigen', compRow3: 'Websuche Bestätigung', compRow4: 'Quellenidentifikation',
+    compPct1: '❌', compPct2: '❌', compPct3: '❌', compPct4: '❌',
+    compRow5: '5 Mechanismen, alle Quellen, Transformationen, MCP-Injektion, Mosaik-Assembly',
+    compPct5: '✅ 100%',
     uniqueConclusion: '<strong>Schlussfolgerung:</strong> UAC <strong style="color:var(--accent3);">hat keine vollständigen Analoga</strong> weltweit.',
     sourcesTitle: 'Ressourcen',
     src1Label: '📄 Dokument', src1Title: 'Vollständiges Manifest (Englisch)', src1Desc: 'Vollständige Beschreibung.',
@@ -626,8 +654,7 @@ const TR = {
   },
   fr: {
     tagline: '« Réutilisez, ne régénérez pas »',
-    discovererLabel: 'Découvreur',
-    coDiscovererLabel: 'Co-découvreur',
+    discovererLabel: 'Co-découvreurs indépendants',
     ctaTitle: 'Une nouvelle catégorie dans l\'architecture des agents IA',
     ctaDesc: 'UAC — un mécanisme permettant aux agents IA de réutiliser le contenu plutôt que de le régénérer. Jusqu\'à 96% d\'économie de tokens. Domaine public.',
     aboutTitle: 'Manifeste de la découverte',
@@ -655,7 +682,13 @@ const TR = {
     researchCallout: '<strong>Résultat :</strong> Universal AI Clipboard n\'est pas "juste un autre outil". C\'est une <strong>nouvelle catégorie d\'architecture</strong> pour les agents IA, avec un nouvel axe de citation (Agent→Agent) et 5 mécanismes uniques sans analogue complet dans le monde. (Clipboard Primitives de TJ Guadagno est une implémentation partielle ~40%).',
     uniqueTitle: 'Vérification d\'unicité',
     comp1: 'Mécanisme', comp2: 'Axe', comp3: 'But',
-    compRow1: 'Afficher la source', compRow2: 'Afficher les sources', compRow3: 'Confirmation web', compRow4: 'Identification', compRow5: 'Réutilisation entre appels',
+    compMatch: 'Couverture UAC',
+    compRowCp: 'copy+template_invoke, emplacements nommés, placeholders {{slot}}, résolution au niveau harness, transfert octet-identique',
+    compPctCp: '⚠️ ~40%',
+    compRow1: 'Afficher la source', compRow2: 'Afficher les sources', compRow3: 'Confirmation web', compRow4: 'Identification',
+    compPct1: '❌', compPct2: '❌', compPct3: '❌', compPct4: '❌',
+    compRow5: '5 mécanismes, toutes sources, transformations, injection MCP, assemblage mosaïque',
+    compPct5: '✅ 100%',
     uniqueConclusion: '<strong>Conclusion :</strong> UAC <strong style="color:var(--accent3);">n\'a pas d\'analogue complet</strong> dans les systèmes d\'agents IA.',
     sourcesTitle: 'Ressources',
     src1Label: '📄 Document', src1Title: 'Manifeste complet (anglais)', src1Desc: 'Description complète en anglais.',
@@ -671,8 +704,7 @@ const TR = {
   },
   ja: {
     tagline: '「再利用、再生成しない」',
-    discovererLabel: '発見者',
-    coDiscovererLabel: '共同発見者',
+    discovererLabel: '独立共同発見者',
     ctaTitle: 'AIエージェントアーキテクチャの新カテゴリー',
     ctaDesc: 'Universal AI Clipboard (UAC) — AIエージェントがコンテンツを再生成せず再利用できるようにする仕組み。最大96%のトークン節約。パブリックドメイン。',
     aboutTitle: '発見宣言',
@@ -700,7 +732,13 @@ const TR = {
     researchCallout: '<strong>結果：</strong> Universal AI Clipboardは「単なるツール」ではありません。これはAIエージェントの<strong>新しいアーキテクチャカテゴリー</strong>であり、新しい引用軸（エージェント→エージェント）と5つの独自メカニズムを持ち、世界中に完全な類似はありません。（TJ GuadagnoのClipboard Primitivesは約40%の部分実装です。）',
     uniqueTitle: '独自性の検証',
     comp1: 'メカニズム', comp2: '軸', comp3: '目的',
-    compRow1: '回答ソースを表示', compRow2: 'ソース表示タグ', compRow3: 'ウェブ検索確認', compRow4: 'ソース識別', compRow5: '呼び出し間のコンテンツ再利用',
+    compMatch: 'UAC カバレッジ',
+    compRowCp: 'copy+template_invoke, 名前付きスロット, {{slot}} プレースホルダー, ハーネスレベル解決, バイト同一転送',
+    compPctCp: '⚠️ ~40%',
+    compRow1: '回答ソースを表示', compRow2: 'ソース表示タグ', compRow3: 'ウェブ検索確認', compRow4: 'ソース識別',
+    compPct1: '❌', compPct2: '❌', compPct3: '❌', compPct4: '❌',
+    compRow5: '5つのメカニズム, すべてのソース, 変換, MCPインジェクション, モザイクアセンブリ',
+    compPct5: '✅ 100%',
     uniqueConclusion: '<strong>結論：</strong> UACは<strong style="color:var(--accent3);">世界的に完全な類似がありません</strong>。',
     sourcesTitle: 'リソース',
     src1Label: '📄 ドキュメント', src1Title: '完全宣言（英語）', src1Desc: '完全な説明：問題、解決策、5つのメカニズム、経済的影響。',
@@ -716,8 +754,7 @@ const TR = {
   },
   hi: {
     tagline: '"पुनः उपयोग करें, पुनः निर्माण न करें"',
-    discovererLabel: 'खोजकर्ता',
-    coDiscovererLabel: 'सह-खोजकर्ता',
+    discovererLabel: 'स्वतंत्र सह-खोजकर्ता',
     ctaTitle: 'AI एजेंट आर्किटेक्चर में एक नई श्रेणी',
     ctaDesc: 'Universal AI Clipboard (UAC) — एक तंत्र जो AI एजेंटों को सामग्री को पुनः उत्पन्न करने के बजाय पुनः उपयोग करने की अनुमति देता है। 96% तक टोकन बचत। सार्वजनिक डोमेन में जारी।',
     aboutTitle: 'खोज घोषणापत्र',
@@ -745,7 +782,13 @@ const TR = {
     researchCallout: '<strong>परिणाम:</strong> Universal AI Clipboard सिर्फ "एक और उपकरण" नहीं है। यह AI एजेंटों के लिए <strong>आर्किटेक्चर की एक नई श्रेणी</strong> है, जो मौलिक रूप से नए उद्धरण अक्ष (एजेंट→एजेंट) और 5 अद्वितीय सामग्री पुन: उपयोग तंत्रों द्वारा प्रतिष्ठित है, जिसका दुनिया में कहीं कोई पूर्ण एनालॉग नहीं है। (TJ Guadagno का Clipboard Primitives ~40% आंशिक कार्यान्वयन है।)',
     uniqueTitle: 'विशिष्टता सत्यापन',
     comp1: 'तंत्र', comp2: 'अक्ष', comp3: 'उद्देश्य',
-    compRow1: 'उत्तर का स्रोत दिखाएँ', compRow2: 'स्रोत प्रदर्शन टैग', compRow3: 'वेब खोज पुष्टि', compRow4: 'स्रोत पहचान', compRow5: 'कॉल के बीच सामग्री पुन: उपयोग',
+    compMatch: 'UAC कवरेज',
+    compRowCp: 'copy+template_invoke, नामित स्लॉट, {{slot}} प्लेसहोल्डर, हार्नेस-स्तरीय समाधान, बाइट-समान स्थानांतरण',
+    compPctCp: '⚠️ ~40%',
+    compRow1: 'उत्तर का स्रोत दिखाएँ', compRow2: 'स्रोत प्रदर्शन टैग', compRow3: 'वेब खोज पुष्टि', compRow4: 'स्रोत पहचान',
+    compPct1: '❌', compPct2: '❌', compPct3: '❌', compPct4: '❌',
+    compRow5: '5 तंत्र, सभी स्रोत, रूपांतरण, MCP इंजेक्शन, मोज़ेक असेंबली',
+    compPct5: '✅ 100%',
     uniqueConclusion: '<strong>निष्कर्ष:</strong> Universal AI Clipboard (UAC) <strong style="color:var(--accent3);">का विश्व भर में कोई पूर्ण एनालॉग नहीं है</strong>।',
     sourcesTitle: 'संसाधन',
     src1Label: '📄 दस्तावेज़', src1Title: 'पूर्ण घोषणापत्र (अंग्रेज़ी)', src1Desc: 'पूर्ण विवरण: समस्या, समाधान, 5 मुख्य तंत्र, आर्थिक प्रभाव।',

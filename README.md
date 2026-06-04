@@ -11,11 +11,7 @@
 [![Category: AI Architecture](https://img.shields.io/badge/Category-AI_Agent_Architecture-orange.svg)]()
 [![Discoverer](https://img.shields.io/badge/Discoverer-DScoNOIZ-ff6b35.svg)](https://github.com/DScoNOIZ)
 
-**Discoverer:** [DScoNOIZ](https://github.com/DScoNOIZ) · **Date:** June 3, 2026 · **License:** CC0 1.0 Universal (Public Domain)
-
----
-
-## 🇬🇧 ENGLISH
+**Discoverer:** [DScoNOIZ](https://github.com/DScoNOIZ) · **Co-Discoverer:** [TJ Guadagno](https://github.com/TJ-Codes) · **Date:** June 3, 2026 · **License:** CC0 1.0 Universal (Public Domain)
 
 ### 🤔 What Is This? (Simple Explanation)
 
@@ -50,7 +46,9 @@ The agent becomes an **editor and curator** — combining fragments from differe
 
 ### 🔬 Deep Research Verification (7 Rounds)
 
-I conducted **7 rounds of deep search** (Tavily advanced depth, ~50 sources) across all known AI categories: arXiv, LangChain, Anthropic, OpenAI, Google, MCP, CAMEL-AI, UiPath, Microsoft, AWS, GitHub discussions — **zero analogues found**.
+I conducted **7 rounds of deep search** (Tavily advanced depth, ~50 sources) across all known AI categories: arXiv, LangChain, Anthropic, OpenAI, Google, MCP, CAMEL-AI, UiPath, Microsoft, AWS, GitHub discussions — **no complete analogues found**.
+
+> **Note:** After publication, the work of **TJ Guadagno** — [Clipboard Primitives](https://github.com/TJ-Codes/Agent-clipboard) (~Dec 2025) — was discovered. It is a partial experimental implementation (~40% of the concept) and confirms independent emergence of the idea. TJ Guadagno is recognized as an independent **co-discoverer**.
 
 | Category                                  | Result                                                |
 | ----------------------------------------- | ----------------------------------------------------- |
@@ -63,7 +61,7 @@ I conducted **7 rounds of deep search** (Tavily advanced depth, ~50 sources) acr
 | Shared memory systems                     | ❌ RAG memory, not precise citation                   |
 | **★ UAC — this discovery**                | **✅ 5 unique mechanisms, new category**              |
 
-**CAMEL-AI** (the closest partial match) covers only **~5%** of UAC's features — no Syntactic Clipboard, no Anchor Pairs, no Transform Pipeline, no MCP injection, no multi_ref.
+**CAMEL-AI** (another partial match) covers only **~5%** of UAC's features — no Syntactic Clipboard, no Anchor Pairs, no Transform Pipeline, no MCP injection, no multi_ref.
 
 ### 💰 Global Impact
 
@@ -90,11 +88,20 @@ Up to **96% token savings**, **60-80% cost reduction**, billions of tokens saved
 ### ⚖️ Legal
 
 **CC0 1.0 Universal — Public Domain.** No patents, no royalties, no restrictions. The discovery date (June 3, 2026) is immutably recorded by Git/GitHub history.
+---
+
+## 🤝 ACKNOWLEDGMENT OF CO-DISCOVERER
+
+I acknowledge **TJ Guadagno** as an independent co-discoverer who experimentally implemented clipboard primitives for AI agents (`copy`/`template_invoke` with named slots). His work preceded this manifesto and confirms the concept's viability.
+
+- **Post:** [Copy and Paste for AI Agents: An Experimental Primitive](https://www.linkedin.com/pulse/copy-paste-ai-agents-experimental-primitive-tj-guadagno-v3r9c)
+- **Code:** [github.com/TJ-Codes/Agent-clipboard](https://github.com/TJ-Codes/Agent-clipboard)
+
+UAC extends the idea to a **universal system** with 5 mechanisms, all-source clipboard, mosaic assembly, and cross-protocol citation.
 
 ---
 
 ## 🇷🇺 РУССКИЙ
-
 ### 🤔 Что это? (Простое объяснение)
 
 **AI-агенты тратят до 90% своего выходного трафика** на постоянную перегенерацию одного и того же кода, команд и текста. Каждый раз, когда ИИ пишет команду, блок кода или конфигурацию — даже если он написал то же самое минуту назад — он генерирует это с нуля.
@@ -129,6 +136,12 @@ Up to **96% token savings**, **60-80% cost reduction**, billions of tokens saved
 ### 💰 Глобальный эффект
 
 До **96% экономии токенов**, **60-80% снижения стоимости**, миллиарды токенов ежедневно, десятки тысяч тонн CO₂ в год.
+
+### 🤝 Признание сооткрывателя
+
+Я признаю **TJ Guadagno** независимым сооткрывателем, который экспериментально реализовал clipboard primitives для AI-агентов (`copy`/`template_invoke` с именованными слотами). Его работа предшествовала данному манифесту и подтверждает жизнеспособность концепции.
+
+UAC расширяет идею до **универсальной системы** с 5 механизмами, буфером обмена для всех источников, мозаичной сборкой и сквозным цитированием.
 
 ### 🌐 Сайт
 
@@ -257,6 +270,10 @@ Up to **96% token savings**, **60-80% cost reduction**, billions of tokens saved
 **CC0 1.0 Universal — सार्वजनिक डोमेन।** कोई पेटेंट, रॉयल्टी या प्रतिबंध नहीं।
 
 ---
+
+## 🤝 Acknowledgment
+
+**TJ Guadagno** — independent co-discoverer, author of Clipboard Primitives experimental implementation.
 
 ## 📬 Join the Discussion
 

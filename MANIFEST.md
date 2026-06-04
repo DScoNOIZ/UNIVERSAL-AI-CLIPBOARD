@@ -26,6 +26,29 @@ I, **[DScoNOIZ](https://github.com/DScoNOIZ)**, declare before the global commun
 
 ---
 
+## 🤝 CO-DISCOVERER: INDEPENDENT DISCOVERY
+
+I acknowledge and respectfully recognize that **TJ Guadagno** (TJ-Codes) independently arrived at the same fundamental idea and experimentally implemented it as **Clipboard Primitives** — a `copy`/`template_invoke` mechanism with named slots and `{{slot}}` placeholders for AI agents.
+
+**His work:** [Copy and Paste for AI Agents: An Experimental Primitive](https://www.linkedin.com/pulse/copy-paste-ai-agents-experimental-primitive-tj-guadagno-v3r9c) (~December 2025)
+**Code:** [github.com/TJ-Codes/Agent-clipboard](https://github.com/TJ-Codes/Agent-clipboard)
+
+TJ Guadagno is an **independent co-discoverer** of this concept. His experiment confirmed that:
+- Models **naturally adopt** clipboard semantics without special training
+- Clipboard primitives **eliminate** token regeneration, latency, and content mutation risks
+- The mechanism requires **harness-level integration**, not MCP-server level
+
+**My Universal AI Clipboard concept is broader and more universal** — it includes Clipboard Primitives as a special case and extends the idea to:
+- **5 citation mechanisms** (including syntactic clipboard via AST, message index, anchor pair citation)
+- **Universal clipboard for any source** (files, chat, terminal, API, MCP)
+- **Mosaic Assembly** — combining fragments from different sources with transformations
+- **Cross-Protocol Citation** — seamless citation across any protocol, including MCP
+
+**Computer analogy:** Clipboard Primitives is like a simple copy utility for one application. Universal AI Clipboard is a full system-wide clipboard manager working across all applications, with slot management, transform pipeline, and cross-protocol integration.
+
+> **I do not relinquish my status as discoverer.** I formulated and systematized this concept independently, conducting multi-round research that found no complete analogues. Having learned of TJ Guadagno's work only after publishing the manifesto, I acknowledge his independent contribution and consider it my duty to reflect this in the manifesto.
+---
+
 ## 🏛️ NAMING
 
 **Official name:** **UNIVERSAL AI CLIPBOARD (UAC)**
@@ -236,6 +259,8 @@ When adopted industry-wide, savings will reach billions of tokens daily, equival
 
 I conducted **extensive multi-round deep research** (7 rounds, ~50 sources) through web search systems (Tavily Search, advanced depth) covering all known categories of AI agent architectures:
 
+*After publishing the manifesto, in additional analysis (rounds 8-10), it was discovered that TJ Guadagno independently implemented an experimental prototype of the concept — Clipboard Primitives. This work was not identified in the first 7 search rounds due to its low visibility (LinkedIn Pulse + GitHub with no stars).*
+
 - AI agent clipboard copy-paste between tool calls
 - Content citation mechanisms for AI agents
 - Zero-token copy paste technologies
@@ -250,6 +275,7 @@ I conducted **extensive multi-round deep research** (7 rounds, ~50 sources) thro
 **Objective:** find anything that solves the same problem — allowing an AI agent to reference existing content between tool calls instead of regenerating it.
 
 **Result: nothing of the kind was found.**
+*Clarification: TJ Guadagno's experimental work (Clipboard Primitives, ~December 2025) is a partial implementation (~40% of the UAC concept) and confirms the viability of the idea, but is not a complete analogue.*
 
 | Category                                    | Sources                   | Why it is NOT an analogue                                                                                                             |
 | ------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -279,7 +305,7 @@ I conducted **extensive multi-round deep research** (7 rounds, ~50 sources) thro
 | Tool output caching (reference + preview) | ✅       | ✅               | Both       |
 | Coverage of UAC features                  | **100%** | **~5%**          | —          |
 
-> **Universal AI Clipboard has no analogues in worldwide AI agent systems practice. This is a pioneering technology creating a new category. The multi-round deep search confirmed: zero analogues exist at any level — conceptual, architectural, or implementational.**
+> **Universal AI Clipboard has no complete analogues in worldwide AI agent systems practice. This is a pioneering technology creating a new category. The only known partial implementation — Clipboard Primitives (TJ Guadagno, ~40% of the concept) — was discovered only after the manifesto's publication and confirms the independent emergence of the idea among different researchers.**
 
 ---
 
@@ -350,11 +376,14 @@ The commit history, edit dates, and all chronological changes are **immutably pr
 
 | Date                | Event                                                                    |
 | ------------------- | ------------------------------------------------------------------------ |
-| **May — June 2026** | Research: analysis of existing AI agent architectures                    |
-| **June 2026**       | Discovery: no existing technology has an analogue                        |
-| **June 2026**       | Universal AI Clipboard concept formulated                                |
-| **June 3, 2026**    | Uniqueness research completed — **no analogues found**                   |
-| **June 3, 2026**    | **This manifesto published** — discovery released into the public domain |
+| **~2021**         | First awareness of the problem (DScoNOIZ): thought "model should not regenerate what it has already seen"                                         |
+| **~December 2025** | **Independent experiment:** TJ Guadagno publishes Clipboard Primitives — `copy`/`template_invoke` with named slots and `{{slot}}` placeholders     |
+| **May — June 2026** | Research: analysis of existing AI agent architectures                                                                                             |
+| **June 2026**       | Discovery: no existing technology has a complete analogue                                                                                        |
+| **June 2026**       | Universal AI Clipboard concept formulated                                                                                                        |
+| **June 3, 2026**    | Uniqueness research completed — **no complete analogues found**                                                                                   |
+| **June 3, 2026**    | **This manifesto published** — discovery released into the public domain                                                                          |
+| **June 4, 2026**    | TJ Guadagno's work discovered — acknowledgment of independent co-discoverer                                                                       |
 
 ---
 

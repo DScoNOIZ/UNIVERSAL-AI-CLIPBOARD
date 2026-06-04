@@ -26,6 +26,18 @@
 
 ---
 
+## 🤝 共同发现者：独立发现
+
+我承认 **TJ Guadagno**（TJ-Codes）独立得出了相同的基本思想，并以 **Clipboard Primitives** 的形式进行了实验性实现——一个带有命名插槽和 `{{slot}}` 占位符的 `copy`/`template_invoke` 机制。
+
+**他的工作：** [Copy and Paste for AI Agents: An Experimental Primitive](https://www.linkedin.com/pulse/copy-paste-ai-agents-experimental-primitive-tj-guadagno-v3r9c)（~2025年12月）
+**代码：** [github.com/TJ-Codes/Agent-clipboard](https://github.com/TJ-Codes/Agent-clipboard)
+
+TJ Guadagno 是这一概念的**独立共同发现者**。
+
+> **我的 Universal AI Clipboard 概念更广泛、更通用**——它将这一思想扩展到5种引用机制、适用于所有来源的通用剪贴板以及跨协议引用。
+---
+
 ## 🏛️ 命名
 
 **官方名称：** **UNIVERSAL AI CLIPBOARD (UAC)**

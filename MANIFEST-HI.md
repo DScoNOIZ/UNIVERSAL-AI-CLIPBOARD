@@ -26,6 +26,18 @@
 
 ---
 
+## 🤝 सह-खोजकर्ता: स्वतंत्र खोज
+
+मैं स्वीकार करता हूँ कि **TJ Guadagno** (TJ-Codes) स्वतंत्र रूप से उसी मौलिक विचार पर पहुँचे और इसे **Clipboard Primitives** के रूप में प्रायोगिक रूप से लागू किया — AI एजेंटों के लिए नामित स्लॉट और `{{slot}}` प्लेसहोल्डर के साथ एक `copy`/`template_invoke` तंत्र।
+
+**उनका कार्य:** [Copy and Paste for AI Agents: An Experimental Primitive](https://www.linkedin.com/pulse/copy-paste-ai-agents-experimental-primitive-tj-guadagno-v3r9c) (~दिसंबर 2025)
+**कोड:** [github.com/TJ-Codes/Agent-clipboard](https://github.com/TJ-Codes/Agent-clipboard)
+
+TJ Guadagno इस अवधारणा के **स्वतंत्र सह-खोजकर्ता** हैं।
+
+> **मेरी Universal AI Clipboard अवधारणा व्यापक और अधिक सार्वभौमिक है** — यह विचार को 5 उद्धरण तंत्रों, सभी स्रोतों के लिए सार्वभौमिक क्लिपबोर्ड और क्रॉस-प्रोटोकॉल उद्धरण तक विस्तारित करती है।
+---
+
 ## 🏛️ नामकरण
 
 **आधिकारिक नाम:** **UNIVERSAL AI CLIPBOARD (UAC)**

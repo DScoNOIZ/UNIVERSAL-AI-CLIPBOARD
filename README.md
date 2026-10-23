@@ -79,6 +79,10 @@ Up to **96% token savings**, **60-80% cost reduction**, billions of tokens saved
 | [`MANIFEST-FR.md`](MANIFEST-FR.md)           | 🇫🇷 French — Manifeste complet            |
 | [`MANIFEST-JA.md`](MANIFEST-JA.md)           | 🇯🇵 Japanese — 完全なマニフェスト         |
 | [`MANIFEST-HI.md`](MANIFEST-HI.md)           | 🇮🇳 Hindi — पूर्ण घोषणापत्र              |
+| [`MANIFEST-PT.md`](MANIFEST-PT.md)           | 🇵🇹 Portuguese — Manifesto completo      |
+| [`MANIFEST-IT.md`](MANIFEST-IT.md)           | 🇮🇹 Italian — Manifesto completo         |
+| [`MANIFEST-KO.md`](MANIFEST-KO.md)           | 🇰🇷 Korean — 전체 선언문                  |
+| [`MANIFEST-AR.md`](MANIFEST-AR.md)           | 🇸🇦 Arabic — البيان الكامل               |
 | [`RESEARCH.md`](RESEARCH.md)                 | 🔬 Full research history (10 rounds, ~100 sources) |
 | [`COMPARISON.md`](COMPARISON.md)             | 📊 Detailed comparison with existing systems |
 | [`SPECIFICATION.md`](SPECIFICATION.md)       | 📐 Technical specification & objections refutation |
@@ -162,6 +166,10 @@ UAC расширяет идею до **универсальной системы
 | [`MANIFEST-FR.md`](MANIFEST-FR.md) | 🇫🇷 Манифест (французский) |
 | [`MANIFEST-JA.md`](MANIFEST-JA.md) | 🇯🇵 Манифест (японский) |
 | [`MANIFEST-HI.md`](MANIFEST-HI.md) | 🇮🇳 Манифест (хинди) |
+| [`MANIFEST-PT.md`](MANIFEST-PT.md) | 🇵🇹 Манифест (португальский) |
+| [`MANIFEST-IT.md`](MANIFEST-IT.md) | 🇮🇹 Манифест (итальянский) |
+| [`MANIFEST-KO.md`](MANIFEST-KO.md) | 🇰🇷 Манифест (корейский) |
+| [`MANIFEST-AR.md`](MANIFEST-AR.md) | 🇸🇦 Манифест (арабский) |
 | [`RESEARCH.md`](RESEARCH.md) | 🔬 Полная история исследования (10 раундов, ~100 источников) |
 | [`COMPARISON.md`](COMPARISON.md) | 📊 Детальное сравнение с существующими системами |
 | [`SPECIFICATION.md`](SPECIFICATION.md) | 📐 Техническая спецификация и опровержение возражений |

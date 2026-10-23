@@ -139,7 +139,7 @@ Universal AI Clipboard opera sull'asse **«agente → agente»** — consente al
 
 ### Meccanismo 1: 🔗 Appunti Sintattici
 
-Il modello specifica un solo **elemento àncora** — un nome di funzione, un nome di classe o una variabile. Il sistema automaticamente:
+Il modello specifica un solo **elemento àncora** — un nome di funzione, un nome di classe o una variabile. Il sistema fa automaticamente quanto segue:
 
 1. Trova questo elemento nella fonte specificata (file, messaggio di chat, output di un comando)
 2. Determina i suoi confini esatti come unità sintattica

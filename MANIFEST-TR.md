@@ -139,7 +139,7 @@ Universal AI Clipboard **"ajan → ajan"** ekseninde çalışır — ajanın ken
 
 ### Mekanizma 1: 🔗 Sözdizimsel Pano
 
-Model yalnızca tek bir **çapa öğesi** belirtir — bir işlev adı, sınıf adı veya değişken. Sistem otomatik olarak:
+Model yalnızca tek bir **çapa öğesi** belirtir — bir işlev adı, sınıf adı veya değişken. Sistem otomatik olarak şunu yapar:
 
 1. Bu öğeyi belirtilen kaynakta (dosya, sohbet mesajı, komut çıktısı) bulur
 2. Sınırlarını sözdizimsel bir birim olarak tam olarak belirler

@@ -137,7 +137,7 @@ Universal AI Clipboard opera en el eje **«agente → agente»** — permite al 
 
 ### Mecanismo 1: 🔗 Portapapeles Sintáctico
 
-El modelo especifica solo un **elemento ancla** — un nombre de función, clase o variable. El sistema automáticamente:
+El modelo especifica solo un **elemento ancla** — un nombre de función, clase o variable. El sistema lo hace automáticamente:
 1. Encuentra este elemento en la fuente especificada (archivo, mensaje de chat, salida de comando)
 2. Determina sus límites exactos como unidad sintáctica
 3. Extrae la unidad completa

@@ -139,7 +139,7 @@ Universal AI Clipboard opera no eixo **«agente → agente»** — permite que o
 
 ### Mecanismo 1: 🔗 Área de Transferência Sintática
 
-O modelo especifica apenas um **elemento âncora** — um nome de função, nome de classe ou variável. O sistema automaticamente:
+O modelo especifica apenas um **elemento âncora** — um nome de função, nome de classe ou variável. O sistema faz isso automaticamente:
 
 1. Localiza este elemento na fonte especificada (arquivo, mensagem de chat, saída de comando)
 2. Determina seus limites exatos como unidade sintática

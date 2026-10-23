@@ -137,7 +137,7 @@ Universal AI Clipboard fonctionne sur l'axe **« agent → agent »** — il per
 
 ### Mécanisme 1 : 🔗 Presse-papiers Syntaxique
 
-Le modèle spécifie un seul **élément d'ancrage** — un nom de fonction, de classe ou de variable. Le système automatiquement :
+Le modèle spécifie un seul **élément d'ancrage** — un nom de fonction, de classe ou de variable. Le système procède automatiquement :
 1. Trouve cet élément dans la source spécifiée (fichier, message de chat, sortie de commande)
 2. Détermine ses limites exactes en tant qu'unité syntaxique
 3. Extrait l'unité entière
@@ -145,7 +145,7 @@ Le modèle spécifie un seul **élément d'ancrage** — un nom de fonction, de 
 **Économie :** quelques tokens pour la référence au lieu de milliers de tokens de code.
 
 ```
-{ source: "fichier", chemin: "utils.ts", focus: "calculateSum" }
+{ source: "file", path: "utils.ts", focus: "calculateSum" }
   → 2 tokens au lieu de 800+ tokens de toute la fonction
 ```
 
@@ -160,8 +160,8 @@ Le modèle spécifie seulement le **DÉBUT** et la **FIN** du fragment désiré 
 
 ```
 { source: "chat", ref: "-1",
-  début: "function calculateSum(",
-  fin: "return result;" }
+  start: "function calculateSum(",
+  end: "return result;" }
   → ~10 tokens au lieu de 200+
 ```
 

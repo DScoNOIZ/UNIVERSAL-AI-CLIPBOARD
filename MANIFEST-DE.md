@@ -16,7 +16,7 @@
 
 Ich, **[DScoNOIZ](https://github.com/DScoNOIZ)**, erkläre vor der globalen Gemeinschaft:
 
-**1. Ich bin der Entdecker** einer grundlegend neuen Kategorie in der Architektur von KI-Agenten — des **«Optionalen mechanisms zur Inhaltszitierung zwischen Werkzeugaufrufen»**, genannt **Universal AI Clipboard (UAC)**.
+**1. Ich bin der Entdecker** einer grundlegend neuen Kategorie in der Architektur von KI-Agenten — des **Optionalen Mechanismus zur Inhaltszitierung zwischen Werkzeugaufrufen**, genannt **Universal AI Clipboard (UAC)**.
 
 **2. Der Kern der Entdeckung:** Ein KI-Agent kann bestehenden kontextuellen Inhalt durch spezielle Parameter (`ref`, `multi_ref`, `transform`) referenzieren, anstatt ihn neu zu generieren. Das Modell wird zum **Assembler**, der fertige Informationsfragmente in einem einzigen Aufruf kombiniert.
 
@@ -35,7 +35,7 @@ Ich erkenne an und respektiere, dass **TJ Guadagno** (TJ-Codes) unabhängig zur 
 
 TJ Guadagno ist ein **unabhängiger Mitentdecker** dieses Konzepts. Sein Experiment bestätigte:
 - Modelle **übernehmen natürlich** die Zwischenablage-Semantik ohne spezielles Training
-- Clipboard-Primitives **eliminieren** Token-Neugenerierung, Latenz und Inhaltsmutationsrisiken
+- Clipboard Primitives **eliminieren** Token-Neugenerierung, Latenz und Inhaltsmutationsrisiken
 - Der Mechanismus erfordert **Integration auf Harness-Ebene**, nicht auf MCP-Server-Ebene
 
 **Mein Universal-AI-Clipboard-Konzept ist breiter und universeller** — es erweitert die Idee auf:
@@ -65,12 +65,12 @@ TJ Guadagno ist ein **unabhängiger Mitentdecker** dieses Konzepts. Sein Experim
 
 Moderne KI-Agenten verschwenden **bis zu 90% ihres Ausgabeverkehrs** mit dem monotonen Neugenerieren von Inhalten, die bereits im Sitzungskontext existieren.
 
-Jedes Mal, wenn ein Modell einen Befehl, einen Codeblock oder einen Textfragment schreibt — generiert es ihn von Grund auf neu, selbst wenn derselbe Inhalt vor einer Minute erstellt wurde. Das Modell hat keine Möglichkeit, auf bereits vorhandene Inhalte instrumentell zu verweisen.
+Jedes Mal, wenn ein Modell einen Befehl, einen Codeblock oder ein Textfragment schreibt — generiert es ihn von Grund auf neu, selbst wenn derselbe Inhalt vor einer Minute erstellt wurde. Das Modell hat keine Möglichkeit, auf bereits vorhandene Inhalte instrumentell zu verweisen.
 
 ### Globaler Maßstab des Problems
 
 - Millionen von KI-Agenten arbeiten weltweit täglich
-- Jeder führt dutzende Tool-Aufrufe pro Sitzung durch
+- Jeder führt Dutzende Tool-Aufrufe pro Sitzung durch
 - Ein erheblicher Teil jedes Aufrufs ist die Neugenerierung vorhandener Inhalte
 - Dies führt zu enormem Energieverbrauch, Rechenverschwendung und finanziellen Kosten
 
@@ -137,7 +137,7 @@ Universal AI Clipboard arbeitet auf der **«Agent → Agent»-Achse** — es erl
 
 ### Mechanismus 1: 🔗 Syntaktische Zwischenablage
 
-Das Modell gibt nur ein **Ankerelement** an — einen Funktionsnamen, Klassennamen oder eine Variable. Das System automatisch:
+Das Modell gibt nur ein **Ankerelement** an — einen Funktionsnamen, Klassennamen oder eine Variable. Das System macht das automatisch:
 1. Findet dieses Element in der angegebenen Quelle (Datei, Chat-Nachricht, Befehlsausgabe)
 2. Bestimmt seine genauen Grenzen als syntaktische Einheit
 3. Extrahiert die gesamte Einheit
@@ -252,6 +252,20 @@ Ich führte **umfangreiche mehrstufige Tiefenrecherchen** (7 Runden, ~50 Quellen
 **Ziel:** Etwas finden, das dasselbe Problem löst — einem KI-Agenten erlauben, vorhandene Inhalte zwischen Tool-Aufrufen zu referenzieren anstatt sie neu zu generieren.
 
 **Ergebnis: nichts dergleichen gefunden.**
+
+| Kategorie | Quellen | Warum es KEIN Analogon ist |
+| --------- | ------- | -------------------------- |
+| **Zitier-APIs (Anthropic/OpenAI/Google)** | Offizielle APIs | Zeigen dem Nutzer die Quelle, erlauben dem Agenten keine Wiederverwendung des Inhalts. Achse: nur Agent → Nutzer |
+| **Caching (Prompt, semantisch)** | Verschiedene Frameworks | Funktioniert auf Anfrageebene, nicht auf Ebene des Inhaltsfragments |
+| **RAG** | LangChain, OpenAI, Google | Ruft aus externen Wissensbasen ab, nicht aus dem aktuellen Sitzungskontext |
+| **CAMEL-AI "Brainwash Your Agent"** | camel-ai.org | Speichert nur die LETZTE Tool-Ausgabe als Referenz + kurze Vorschau. Keine 5 Mechanismen, keine Transformationspipeline, kein multi_ref, keine MCP-Injektion |
+| **LangChain artifacts** | langchain.com | `content_and_artifact` trennt Inhalt von Metadaten, kein Zitiersystem. Keine Referenzierung zwischen Tool-Aufrufen |
+| **MCP Resources** | modelcontextprotocol.io | Ein Standard zur Anbindung von Tools, kein Zitiermechanismus von Agent zu Agent |
+| **Wissenschaftliche Arbeiten (AgentReuse, KVCOMM)** | arXiv | Wiederverwendung von AusführungsPLÄNEN oder KV-Cache, keine Inhaltszitierung zwischen Tool-Aufrufen |
+| **Zwischenablage-Tools für Menschen (UiPath, PowerToys)** | UiPath, Microsoft | Für Mensch-Computer-Interaktion konzipiert, nicht für KI-Agenten |
+| **Bestehende KI-Agenten** | Branchenweit | Haben Verlauf, aber keinen Zitiermechanismus zwischen Tool-Aufrufen |
+| **Speicherfreigabe für Multi-Agenten** | Verschiedene | Geteilter RAG-Speicher, keine präzise Zitierung auf Zeichenebene |
+
 *Präzisierung: TJ Guadagnos experimentelle Arbeit (Clipboard Primitives, ~Dezember 2025) ist eine partielle Implementierung (~40% des UAC-Konzepts) und bestätigt die Lebensfähigkeit der Idee, ist aber kein vollständiges Analogon.*
 
 > **Universal AI Clipboard hat keine vollständigen Analoga in der weltweiten Praxis von KI-Agentensystemen. Dies ist eine Pioniertechnologie, die eine neue Kategorie schafft. Das einzige bekannte partielle Analogon — Clipboard Primitives (TJ Guadagno, ~40% des UAC-Konzepts) — wurde erst nach Veröffentlichung des Manifests entdeckt und bestätigt die unabhängige Entstehung der Idee bei verschiedenen Forschern.**

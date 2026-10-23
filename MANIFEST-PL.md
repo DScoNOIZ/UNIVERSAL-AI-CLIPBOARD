@@ -372,7 +372,7 @@ Historia commitów, daty edycji i wszystkie zmiany chronologiczne są **niezmien
 
 ---
 
-## 🗓️ OS CZASU
+## 🗓️ OŚ CZASU
 
 | Data                | Wydarzenie                                                                    |
 | ------------------- | ------------------------------------------------------------------------ |
@@ -421,7 +421,7 @@ Odkryłem **Universal AI Clipboard** — mechanizm, który pozwala agentom AI po
 
 To nie jest tylko optymalizacja. To **zmiana paradygmatu**: model przestaje być „generatorem tekstu" i staje się **kompozytorem**, który buduje rozwiązania z gotowych fragmentów.
 
-**Tak jak Ctrl+C / Ctrl+V zmieniło świat komputerów, Universal AI Clipboard zmieni świat agentów AI.**
+**Tak jak Ctrl+C / Ctrl+V zmieniły świat komputerów, Universal AI Clipboard zmieni świat agentów AI.**
 
 Oddaję tę ideę ludzkości. Rozwijajcie ją. Ulepszajcie. Wdrażajcie.
 

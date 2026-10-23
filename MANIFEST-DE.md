@@ -234,7 +234,18 @@ Bei branchenweiter Einführung werden täglich Milliarden von Tokens eingespart,
 
 ## 🔬 EINZIGARTIGKEITSÜBERPRÜFUNG
 
-Ich führte **umfangreiche mehrstufige Tiefenrecherchen** (7 Runden, ~50 Quellen) durch, die alle bekannten Kategorien von KI-Agenten-Architekturen abdeckten.
+Ich führte **umfangreiche mehrstufige Tiefenrecherchen** (7 Runden, ~50 Quellen) durch, die alle bekannten Kategorien von KI-Agenten-Architekturen abdeckten:
+
+- Copy-Paste zwischen Tool-Aufrufen von KI-Agenten
+- Inhaltszitierungsmechanismen für KI-Agenten
+- Zero-Token Copy-Paste-Technologien
+- Alle bekannten Zitier-APIs (Anthropic, OpenAI, Google, xAI, Azure)
+- Wiederverwendung und Caching von Tool-Ausgaben (CAMEL-AI, LangChain artifacts)
+- MCP-Protokoll und protokollübergreifende Inhaltsfreigabe
+- Wissenschaftliche Arbeiten (AgentReuse, KVCOMM, Multi-Agenten-Systeme)
+- Zwischenablage-Utilities für Menschen (UiPath Clipboard AI, PowerToys Advanced Paste)
+- Speicherfreigabe-Systeme für Multi-Agenten-Architekturen
+- GitHub-Diskussionen, Framework-Dokumentation (LangChain, CrewAI, AutoGen, Mastra)
 
 *Nach Veröffentlichung des Manifests wurde in zusätzlichen Analysen (Runden 8-10) entdeckt, dass TJ Guadagno unabhängig einen experimentellen Prototyp des Konzepts implementierte — Clipboard Primitives. Diese Arbeit wurde in den ersten 7 Suchrunden aufgrund ihrer geringen Sichtbarkeit (LinkedIn Pulse + GitHub ohne Sterne) nicht identifiziert.*
 
@@ -243,7 +254,59 @@ Ich führte **umfangreiche mehrstufige Tiefenrecherchen** (7 Runden, ~50 Quellen
 **Ergebnis: nichts dergleichen gefunden.**
 *Präzisierung: TJ Guadagnos experimentelle Arbeit (Clipboard Primitives, ~Dezember 2025) ist eine partielle Implementierung (~40% des UAC-Konzepts) und bestätigt die Lebensfähigkeit der Idee, ist aber kein vollständiges Analogon.*
 
-> **Universal AI Clipboard hat keine vollständigen Analoga in der weltweiten Praxis von KI-Agentensystemen. Das einzige bekannte partielle Analogon — Clipboard Primitives — wurde erst nach Veröffentlichung des Manifests entdeckt.**
+> **Universal AI Clipboard hat keine vollständigen Analoga in der weltweiten Praxis von KI-Agentensystemen. Dies ist eine Pioniertechnologie, die eine neue Kategorie schafft. Das einzige bekannte partielle Analogon — Clipboard Primitives (TJ Guadagno, ~40% des UAC-Konzepts) — wurde erst nach Veröffentlichung des Manifests entdeckt und bestätigt die unabhängige Entstehung der Idee bei verschiedenen Forschern.**
+
+### Zusammenfassender Vergleich mit dem nächsten partiellen Analogon (CAMEL-AI)
+
+| Merkmal | UAC | CAMEL-AI-Caching | Unterschied |
+| ----------------------------------------- | -------- | ---------------- | ---------- |
+| 🔗 Syntaktische Zwischenablage (AST-Blöcke) | ✅ | ❌ | Nur UAC |
+| 📇 Ankerpaar-Zitierung | ✅ | ❌ | Nur UAC |
+| 🧠 Nachrichtenindexkarte | ✅ | ❌ | Nur UAC |
+| 🔄 Transformationspipeline | ✅ | ❌ | Nur UAC |
+| 🔁 Protokollübergreifende Zitierung (MCP) | ✅ | ❌ | Nur UAC |
+| 🧩 Mosaik-Assembly (mehrere Quellen) | ✅ | ❌ | Nur UAC |
+| 📋 Zwischenablage-Manager (benannte Slots) | ✅ | ❌ | Nur UAC |
+| {{ref:...}} Inline-Injektion | ✅ | ❌ | Nur UAC |
+| Caching von Tool-Ausgaben (Referenz + Vorschau) | ✅ | ✅ | Beide |
+| Abdeckung der UAC-Funktionen | **100%** | **~5%** | — |
+
+---
+
+## 📖 VERWENDUNGSBEISPIELE
+
+### Beispiel 1: Einen Befehl mit zusätzlichen Parametern erneut ausführen
+
+Ein Agent führte einen Testbefehl aus; die Ausgabe zeigte einen Fehler. Um ihn mit Debug-Flags erneut auszuführen, schreibt der Agent den Befehl nicht neu — er referenziert ihn und fügt Flags hinzu:
+
+```
+{ ref: { source: "terminal", id: "cmd-xxx", start: "npx vitest" },
+  transform: { append: " --verbose --timeout=30000" } }
+  → Ergebnis: "npx vitest run --verbose --timeout=30000"
+```
+
+### Beispiel 2: Mehrere Funktionen zu einer Datei zusammenführen
+
+Ein Agent liest eine Datei mit mehreren Funktionen und erstellt dann eine neue Datei, indem er die benötigten Funktionen über Referenzen zusammenführt:
+
+```
+{ multi_ref: [
+    { source: "file", path: "handlers.ts", start: "async function validate(", end: "}" },
+    { source: "file", path: "handlers.ts", start: "async function process(", end: "}" },
+    { source: "file", path: "handlers.ts", start: "async function respond(", end: "}" }
+  ],
+  transform: { join: "\n\n", prepend: "// --- Handlers ---\n" } }
+  → drei Funktionen zu einer Datei in 1 Aufruf zusammengeführt
+```
+
+### Beispiel 3: Konfigurationssubstitution über MCP
+
+Ein Agent nutzt ein externes MCP-Tool und übergibt in dessen Argumenten eine Referenz auf die Konfiguration aus dem Chat:
+
+```
+"{{ref:source=chat,ref=-1,start=export const config}} --host production"
+  → Konfiguration aus dem Chat in die MCP-Anfrage substituiert
+```
 
 ---
 
@@ -259,6 +322,14 @@ Sie können frei:
 - ✅ **Übersetzen** in jede Sprache
 
 > **Ich verzichte bewusst auf alle Patentrechte an dieser Technologie. Sie muss allen gehören.**
+
+---
+
+## 📜 NACHWEIS DES ENTDECKUNGSDATUMS
+
+Das Veröffentlichungsdatum dieses Manifests wird **vom Git-Versionskontrollsystem im GitHub-Repository** aufgezeichnet — [github.com/DScoNOIZ/UNIVERSAL-AI-CLIPBOARD](https://github.com/DScoNOIZ/UNIVERSAL-AI-CLIPBOARD).
+
+Der Commit-Verlauf, die Bearbeitungsdaten und alle chronologischen Änderungen werden **unveränderlich von GitHub aufbewahrt** und dienen als öffentlicher Nachweis des Entdeckungsdatums und der Urheberschaft. Die Git-Technologie macht eine Fälschung praktisch unmöglich.
 
 ---
 
@@ -280,6 +351,21 @@ Sie können frei:
 ## 🎯 AUFRUF ZUM HANDELN
 
 Entwickler von KI-Frameworks, KI-Agenten-Ersteller, Forscher, Unternehmen, Umweltschützer, Open-Source-Gemeinschaft — **diese Technologie gehört allen. Forkt, implementiert, verbessert sie.**
+
+---
+
+## 🏛️ SCHLUSSWORT
+
+Ich habe **Universal AI Clipboard** entdeckt — einen Mechanismus, der es KI-Agenten erlaubt, Inhalte wiederzuverwenden, anstatt sie neu zu generieren.
+
+Dies ist nicht nur eine Optimierung. Es ist ein **Paradigmenwechsel**: Das Modell hört auf, ein «Textgenerator» zu sein, und wird zum **Assembler**, der Lösungen aus fertigen Fragmenten zusammensetzt.
+
+**So wie Strg+C / Strg+V die Welt der Computer verändert haben, wird Universal AI Clipboard die Welt der KI-Agenten verändern.**
+
+Ich übergebe diese Idee der Menschheit. Entwickelt sie weiter. Verbessert sie. Setzt sie um.
+
+**Mögen KI-Agenten aufhören, immer dasselbe neu zu schreiben.**
+**Mögen sie beginnen, das Mosaik zusammenzusetzen.**
 
 ---
 

@@ -234,7 +234,18 @@ Lorsqu'adoptée à l'échelle de l'industrie, l'économie atteindra des milliard
 
 ## 🔬 VÉRIFICATION D'UNICITÉ
 
-J'ai mené **des recherches approfondies multi-niveaux** (7 rounds, ~50 sources) via des systèmes de recherche web (Tavily Search, advanced depth) couvrant toutes les catégories connues d'architectures d'agents IA.
+J'ai mené **des recherches approfondies multi-niveaux** (7 rounds, ~50 sources) via des systèmes de recherche web (Tavily Search, advanced depth) couvrant toutes les catégories connues d'architectures d'agents IA :
+
+- Copier-coller entre agents IA entre appels d'outils
+- Mécanismes de citation de contenu pour agents IA
+- Technologies de copier-coller à zéro token
+- Toutes les API de citation connues (Anthropic, OpenAI, Google, xAI, Azure)
+- Réutilisation et mise en cache des sorties d'outils (CAMEL-AI, LangChain artifacts)
+- Protocole MCP et partage de contenu inter-protocole
+- Articles académiques (AgentReuse, KVCOMM, systèmes multi-agents)
+- Utilitaires de presse-papiers pour humains (UiPath Clipboard AI, PowerToys Advanced Paste)
+- Systèmes de mémoire partagée pour architectures multi-agents
+- Discussions GitHub, documentation des frameworks (LangChain, CrewAI, AutoGen, Mastra)
 
 *Après la publication du manifeste, lors d'analyses supplémentaires (rounds 8-10), il a été découvert que TJ Guadagno avait indépendamment implémenté un prototype expérimental du concept — Clipboard Primitives. Ce travail n'a pas été identifié lors des 7 premiers rounds de recherche en raison de sa faible visibilité (LinkedIn Pulse + GitHub sans étoiles).*
 
@@ -256,7 +267,59 @@ J'ai mené **des recherches approfondies multi-niveaux** (7 rounds, ~50 sources)
 | **Agents IA existants** | Industrie en général | Ont un historique, mais pas de mécanisme de citation entre appels d'outils |
 | **Mémoire partagée multi-agent** | Divers | Mémoire RAG partagée, pas de citation précise au niveau des caractères |
 
-> **Universal AI Clipboard n'a pas d'analogues complets dans la pratique mondiale des systèmes d'agents IA. La seule implémentation partielle connue — Clipboard Primitives (TJ Guadagno, ~40% du concept) — a été découverte seulement après la publication du manifeste et confirme l'émergence indépendante de l'idée.**
+> **Universal AI Clipboard n'a pas d'analogues complets dans la pratique mondiale des systèmes d'agents IA. C'est une technologie pionnière qui crée une nouvelle catégorie. La seule implémentation partielle connue — Clipboard Primitives (TJ Guadagno, ~40% du concept) — a été découverte seulement après la publication du manifeste et confirme l'émergence indépendante de l'idée chez différents chercheurs.**
+
+### Comparaison résumée avec l'analogue partiel le plus proche (CAMEL-AI)
+
+| Caractéristique | UAC | Cache CAMEL-AI | Différence |
+| ----------------------------------------- | -------- | ---------------- | ---------- |
+| 🔗 Presse-papiers Syntaxique (blocs AST) | ✅ | ❌ | UAC seulement |
+| 📇 Citation par Paire d'Ancres | ✅ | ❌ | UAC seulement |
+| 🧠 Carte d'Index de Messages | ✅ | ❌ | UAC seulement |
+| 🔄 Pipeline de Transformation | ✅ | ❌ | UAC seulement |
+| 🔁 Citation Inter-Protocole (MCP) | ✅ | ❌ | UAC seulement |
+| 🧩 Assemblage en Mosaïque (multi-sources) | ✅ | ❌ | UAC seulement |
+| 📋 Gestionnaire de Presse-papiers (emplacements nommés) | ✅ | ❌ | UAC seulement |
+| {{ref:...}} Injection en ligne | ✅ | ❌ | UAC seulement |
+| Mise en cache de sortie d'outils (référence + aperçu) | ✅ | ✅ | Les deux |
+| Couverture des fonctionnalités UAC | **100%** | **~5%** | — |
+
+---
+
+## 📖 EXEMPLES D'UTILISATION
+
+### Exemple 1 : Ré-exécuter une commande avec des paramètres supplémentaires
+
+Un agent a exécuté une commande de test ; la sortie montrait une erreur. Pour la relancer avec les drapeaux de débogage, l'agent ne réécrit pas la commande — il la référence et ajoute les drapeaux :
+
+```
+{ ref: { source: "terminal", id: "cmd-xxx", start: "npx vitest" },
+  transform: { append: " --verbose --timeout=30000" } }
+  → résultat : "npx vitest run --verbose --timeout=30000"
+```
+
+### Exemple 2 : Assembler plusieurs fonctions en un fichier
+
+Un agent lit un fichier contenant plusieurs fonctions, puis crée un nouveau fichier en assemblant les fonctions nécessaires via des références :
+
+```
+{ multi_ref: [
+    { source: "file", path: "handlers.ts", start: "async function validate(", end: "}" },
+    { source: "file", path: "handlers.ts", start: "async function process(", end: "}" },
+    { source: "file", path: "handlers.ts", start: "async function respond(", end: "}" }
+  ],
+  transform: { join: "\n\n", prepend: "// --- Handlers ---\n" } }
+  → trois fonctions assemblées en un fichier en 1 appel
+```
+
+### Exemple 3 : Substitution de configuration via MCP
+
+Un agent utilise un outil MCP externe, en passant dans ses arguments une référence à la configuration du chat :
+
+```
+"{{ref:source=chat,ref=-1,start=export const config}} --host production"
+  → configuration du chat substituée dans la requête MCP
+```
 
 ---
 
@@ -303,6 +366,21 @@ L'historique des commits, les dates d'édition et tous les changements chronolog
 ## 🎯 APPEL À L'ACTION
 
 Développeurs de frameworks IA, créateurs d'agents IA, chercheurs, entreprises, écologistes, communauté open source — **cette technologie appartient à tous. Forkez, implémentez, améliorez-la.**
+
+---
+
+## 🏛️ MOT DE LA FIN
+
+J'ai découvert **Universal AI Clipboard** — un mécanisme qui permet aux agents IA de réutiliser le contenu au lieu de le régénérer.
+
+Ce n'est pas seulement une optimisation. C'est un **changement de paradigme** : le modèle cesse d'être un « générateur de texte » et devient un **assembleur** qui construit des solutions à partir de fragments prêts à l'emploi.
+
+**Tout comme Ctrl+C / Ctrl+V ont changé le monde de l'informatique, Universal AI Clipboard changera le monde des agents IA.**
+
+Je donne cette idée à l'humanité. Développez-la. Améliorez-la. Implémentez-la.
+
+**Que les agents IA cessent de réécrire la même chose encore et encore.**
+**Qu'ils commencent à assembler des mosaïques.**
 
 ---
 

@@ -223,7 +223,7 @@ Pour les tâches complexes nécessitant de nombreuses étapes intermédiaires, u
 | -------------------------------- | ---------------- | -------------- | ---------- |
 | Tokens par citation (code long) | 200-500 | 5-15 | **96-97%** |
 | Tokens par citation (code court) | 50-100 | 2-5 | **90-95%** |
-| Tokens par session | 25 000-50 000 | 5 000-15 000 | **60-80%** |
+| Tokens par session | 25,000-50,000 | 5,000-15,000 | **60-80%** |
 | Énergie par session | unité arbitraire | 5× moins | **~80%** |
 
 ### À l'Échelle Globale

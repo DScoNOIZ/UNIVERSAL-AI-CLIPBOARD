@@ -223,7 +223,7 @@ Für komplexe Aufgaben, die viele Zwischenschritte erfordern, kann ein Hilfsagen
 | -------------------------------- | ----------------- | -------------- | ---------- |
 | Tokens pro Zitat (langer Code) | 200-500 | 5-15 | **96-97%** |
 | Tokens pro Zitat (kurzer Code) | 50-100 | 2-5 | **90-95%** |
-| Tokens pro Sitzung | 25.000-50.000 | 5.000-15.000 | **60-80%** |
+| Tokens pro Sitzung | 25,000-50,000 | 5,000-15,000 | **60-80%** |
 | Energie pro Sitzung | willkürliche Einheit | 5× weniger | **~80%** |
 
 ### Globaler Maßstab
